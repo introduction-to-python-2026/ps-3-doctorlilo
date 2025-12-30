@@ -1,15 +1,16 @@
 def move(my_list, direction):
 
-    # Finds the index of the one in the list
+    if 1 not in my_list:
+       return my_list 
     index_of_one = my_list.index(1)
-
-    # Move the one to the left or to the right
-    if direction == 'right':
+    
+    if index_of_one != len(my_list) -1 and  direction == 'right':
         my_list[index_of_one] = 0
         my_list[index_of_one + 1] = 1
 
-    elif direction == 'left':
+    elif index_of_one != 0 and direction == 'left':
         my_list[index_of_one] = 0
         my_list[index_of_one - 1] = 1
+   
 
     return my_list
